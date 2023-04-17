@@ -1,0 +1,20 @@
+{
+  "name": "Ejecutar con TypeScript",
+  "type": "node",
+  "request": "launch",
+  "protocol": "inspector",
+  "program": "${workspaceFolder}/node_modules/typescript/bin/tsc",
+  "args": [
+    "-p",
+    "${workspaceFolder}/tsconfig.json"
+  ],
+  "preLaunchTask": "npx tsc",
+  "outFiles": [
+    "${workspaceFolder}/dist/**/*.js"
+  ],
+  "runtimeExecutable": "node",
+  "runtimeArgs": [
+    "--inspect-brk=0.0.0.0:9229",
+    "${workspaceFolder}/dist/index.js"
+  ]
+}
